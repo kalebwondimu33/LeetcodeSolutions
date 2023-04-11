@@ -5,16 +5,18 @@ class Solution:
             if i =="+":
                 stack.append(stack.pop()+stack.pop())
             elif i=="-":
-                a=stack.pop()
-                b=stack.pop()
-                stack.append(b-a)
+                num2=stack.pop()
+                num1=stack.pop()
+                stack.append(num1-num2)
             elif i=="*":
                 stack.append(stack.pop()*stack.pop())
             elif i=="/":
-                a=stack.pop()
-                b=stack.pop()
-                stack.append(int(b/a))
+                num2=stack.pop()
+                num1=stack.pop()
+                stack.append(int(num1/num2))
             else:
                 stack.append(int(i))
-        return stack[0]
+                             
+        return stack.pop()
+            
         
