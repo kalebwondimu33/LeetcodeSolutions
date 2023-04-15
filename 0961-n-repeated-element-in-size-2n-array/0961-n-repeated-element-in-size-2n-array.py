@@ -3,10 +3,6 @@ class Solution:
         hashtable={}
         for i in nums:
             if i in hashtable:
-                hashtable[i]+=1
-            else:
-                hashtable[i]=1
-        for i in nums:
-            if hashtable[i]>1:
                 return i
+            hashtable[i]=1
         
