@@ -1,8 +1,6 @@
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
-        target.sort()
-        arr.sort()
-        if target==arr:
+        if Counter(target)==Counter(arr):
             return True
         else:
             return False
