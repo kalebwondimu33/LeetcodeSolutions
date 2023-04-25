@@ -1,13 +1,9 @@
 class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:
-        hashtable={'a':'white','b':'black','c':'white','d':'black','e':'white','f':'black','g':'white','h':'black'}
+        hashtable={'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8}
         first=coordinates[0]
         second=int(coordinates[1])
-        if hashtable[first]=='white' and second%2==0:
-            return True
-        elif hashtable[first]=='black' and second%2==0:
-            return False
-        elif hashtable[first]=='white' and second%2!=0:
+        if (hashtable[first]+second)%2==0:
             return False
         else:
             return True
