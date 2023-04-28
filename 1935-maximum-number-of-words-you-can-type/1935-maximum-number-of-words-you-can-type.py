@@ -4,9 +4,10 @@ class Solution:
         count=0
         for i in word:
             flag=True
-            for j in i:
-                if j in brokenLetters:
+            for j in brokenLetters:
+                if j in i:
                     flag=False
+                    break
             if flag==True:
                 count+=1
                 
