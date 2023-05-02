@@ -1,19 +1,11 @@
 class Solution:
     def countGoodSubstrings(self, s: str) -> int:
-        left=0
-        mid=1
-        right=2
         count=0
-        while left<mid<right<len(s):
-            if s[left]!=s[mid] and s[mid]!=s[right] and s[left]!=s[right]:
+        if len(s)<3:
+            return 0
+        for i in range(len(s)-2):
+            if s[i]!=s[i+1] and s[i+1]!=s[i+2] and s[i]!=s[i+2]:
                 count+=1
-                left+=1
-                right+=1
-                mid+=1
-            else:
-                left+=1
-                right+=1
-                mid+=1
         return count
                     
         
