@@ -2,7 +2,8 @@ class Solution:
     def makeEqual(self, words: List[str]) -> bool:
         join=''.join(words)
         set1=set(join)
+        dic=Counter(join)
         for i in set1:
-            if join.count(i)%len(words)!=0:
+            if dic[i]%len(words)!=0:
                 return False
         return True
