@@ -3,24 +3,21 @@ class Solution:
         count=0
         if len(password)<8:
             return False
-        m=t=w=tt=f=False
-        for i in password:
-            if i.isupper():
+        m=t=w=tt=False
+        for i in range(len(password)) :
+            if password[i].isupper():
                 m=True
-            if i.islower():
+            if password[i].islower():
                 t=True
-            if i.isdigit():
+            if password[i].isdigit():
                 w=True
-            if i in "!@#$%^&*()-+":
+            if password[i] in "!@#$%^&*()-+":
                 tt=True
-        for i in range(1,len(password)):
-            if password[i-1]==password[i]:
+            if i!=len(password)-1 and password[i]==password[i+1]:
                 return False
-        f=True
-        if  m==True and t==True and w==True and tt==True and f==True:
-            return True
-        else:
-            return False
+        return m and t and w and tt 
+            
+       
             
                 
             
