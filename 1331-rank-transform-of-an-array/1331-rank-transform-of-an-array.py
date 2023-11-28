@@ -1,6 +1,6 @@
 class Solution:
     def arrayRankTransform(self, arr: List[int]) -> List[int]:
-        num=sorted(list(set(arr)))
+        num=sorted(set(arr))
         d={}
         start=1
         result=[0]*len(arr)
