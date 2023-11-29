@@ -1,11 +1,14 @@
 class Solution:
     def countGoodSubstrings(self, s: str) -> int:
+        left=0
+        right=2
         count=0
-        if len(s)<3:
-            return 0
-        for i in range(len(s)-2):
-            if s[i]!=s[i+1] and s[i+1]!=s[i+2] and s[i]!=s[i+2]:
+        while left<right and right<len(s):
+            if len(s[left:right+1])==len(set(s[left:right+1])):
                 count+=1
+            left+=1
+            right+=1
         return count
+    
                     
         
